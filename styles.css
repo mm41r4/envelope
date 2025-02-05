@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff0f0; 
+    font-family: 'Courier New';
+}
+
+.envelope {
+    position: relative;
+    width: 800px;
+    height: 350px;
+    background-color: #d32f2f; 
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.texto {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.estampa {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 160px;
+    background-color: #ffcdd2; 
+}
+.stamp {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #ffcdd2;
+    border-radius: 50%; 
+}
+
+.letter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffebee; 
+    top: 100%;
+    transition: top 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.letter p {
+    font-size: 20px;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#si {
+    background-color: #d32f2f; 
+    color: #fff;
+}
+
+#no {
+    background-color: #ffcdd2; 
+    color: #d32f2f;
+}
+
+#si:hover {
+    background-color: #f44336; 
+}
+
+#no:hover {
+    background-color: #ffa4a2; 
+}
+
+.respuesta {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffebee; 
+    top: 100%;
+    transition: top 0.5s ease-in-out;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.respuesta img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.respuesta p {
+    font-size: 24px;
+    color: #d32f2f;
+}
+
+/* Animaciones */
+.envelope.open .letter {
+    top: 0;
+}
+
+.envelope.open .respuesta {
+    top: 0;
+}
